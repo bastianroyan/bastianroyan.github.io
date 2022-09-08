@@ -1,0 +1,52 @@
+body {
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+}
+
+.pembungkus {
+    width: 50%;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th{
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 8px;
+    color: #fff;
+}
+
+tr:nth-child(even), thead tr {
+    background-color: red;
+}
+
+.tombol {
+    width: 150px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.tombol a {
+    text-decoration: none;
+}
+
+button {
+    padding: 10px 50px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 15px;
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+}
+
