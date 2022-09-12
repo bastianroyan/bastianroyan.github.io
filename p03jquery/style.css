@@ -1,0 +1,94 @@
+body {
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+}
+
+.pembungkus {
+    width: 50%;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+}
+
+h1:hover {
+    cursor: pointer;
+    color: rgba(253,29,29,1);
+    transition: 0.5s;
+    letter-spacing: 5px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th{
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 8px;
+    color: #fff;
+}
+
+tbody tr{
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+}
+
+thead tr {
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+}
+
+tbody td:hover {
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    font-style: italic;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+tbody th:hover {
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+}
+
+thead th:hover {
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+
+.tombol {
+    width: 150px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.tombol a {
+    text-decoration: none;
+}
+
+button {
+    padding: 10px 50px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 15px;
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+}
+
+button:hover {
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    font-style: italic;
+    transition: 0.5s;
+}
+
