@@ -61,3 +61,19 @@ td {
     text-align: left;
 }
 /* akhir pembungkus */
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    body {
+        box-sizing: border-box;
+    }
+
+    #isiPanel img {
+        width: 150px;
+    }
+
+    table {
+        font-size: 13px;
+        margin-top: 30px;
+    }
+}
