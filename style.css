@@ -351,11 +351,11 @@ h2:hover {
     .kontak .facebook, .instagram, .youtube, .website, .whatsapp {
         width: 50px;
         height: 50px;
-        margin-right: 20px;
+        margin-right: 18px;
     }
 
     .facebook {
-        margin-left: 12px;
+        margin-left: 10px;
     }
 
     .footer {
