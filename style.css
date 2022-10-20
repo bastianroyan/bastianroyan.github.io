@@ -25,7 +25,7 @@ body {
 }
 
 .navigasi li a {
-    font-family: "Sofia", sans-serif;
+    font-family: "Audiowide", sans-serif;
     font-size: 14px;
     color: #fff;
     text-decoration: none;
@@ -55,8 +55,8 @@ img {
     border: 3px solid #fff;
     box-shadow: 1px 1px 10px 10px rgba(0,0,0,0.49);
     opacity: 0;
-    transform: scale(1.2);
-    transition: .5s;
+    transform: translate(0, -40px);
+    transition: .3s;
 }
 
 #beranda:hover {
@@ -89,7 +89,7 @@ h2:hover {
 
 .pemilik {
     opacity: 0;
-    transform: translate(-50px, 0);
+    transform: translate(0, -40px);
     transition: .5s;
 }
 
@@ -100,8 +100,8 @@ h2:hover {
 
 .quotes {
     opacity: 0;
-    transform: translate(-50px, 0);
-    transition: .5s;
+    transform: translate(0, -40px);
+    transition: .7s;
 }
 
 .quotes.isiMuncul {
@@ -120,15 +120,52 @@ h2:hover {
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.58);
 }
 
-.tentang .isiTentang {
+.tentang h3 {
     opacity: 0;
-    transform: translate(-50px, 0);
+    transform: translate(0, -40px);
     transition: .5s;
 }
 
-.tentang .isiTentang.isiMuncul {
+.tentang .hobbi, .profil, .kemampuan {
+    width: 300px;
+    height: 200px;
+    float: left;
+    margin-left: 75px;
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.58);
+    opacity: 0;
+    transform: translate(0, -40px);
+    transition: .5s;
+}
+
+.tentang .isiTentang {
+    opacity: 0;
+    transform: translate(0, -40px);
+    transition: .5s;
+}
+
+.tentang h3.muncul, .isiTentang.muncul, .hobbi.muncul, .profil.muncul, .kemampuan.muncul {
     opacity: 1;
     transform: translate(0,0);
+}
+
+.tentang ul{
+    text-align: left;
+    /* list-style-type: circle; */
+}
+
+.tentang .hobbi {
+    background-color: blueviolet;
+}
+
+.tentang .profil {
+    background-color: orange;
+}
+
+.tentang .kemampuan {
+    background-color: salmon;
 }
 /* akhir tentang */
 
@@ -136,6 +173,12 @@ h2:hover {
 .tugas ul{
     text-align: left;
     list-style-type: circle;
+}
+
+.tugas h3 {
+    opacity: 0;
+    transform: translate(0, -40px);
+    transition: .5s;
 }
 
 .tugas .p03, .p04, .p05, .p06, .p07 {
@@ -151,7 +194,7 @@ h2:hover {
     transition: .5s;
 }
 
-.tugas .p03.muncul, .p04.muncul, .p05.muncul, .p06.muncul, .p07.muncul {
+.tugas h3.muncul, .p03.muncul, .p04.muncul, .p05.muncul, .p06.muncul, .p07.muncul {
     opacity: 1;
     transform: translate(0,0);
 }
@@ -272,7 +315,7 @@ h2:hover {
 
 .kontak .sosmed {
     opacity: 0;
-    transform: translate(-50px, 0);
+    transform: translate(0, -40px);
     transition: .5s;
 }
 

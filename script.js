@@ -11,7 +11,6 @@ $('.sekrol').on('click', function(){
 
 // efek animasi loading
 $(window).on('load', function() {
-	$('.isiTentang').addClass('isiMuncul');
 	$('.pemilik').addClass('isiMuncul');
 	$('.quotes').addClass('isiMuncul');
 	$('img').addClass('isiMuncul');
@@ -26,6 +25,14 @@ $(window).scroll(function(){
 		$('.p0Semua').each(function(i) {
 			setTimeout(function() {
 				$('.p0Semua').eq(i).addClass('muncul');
+			}, 300 * (i+1));
+		});
+	}
+
+	if(cobaSekrol > $('.tentang').offset().top - 250 ) {
+		$('.dataDiri').each(function(i) {
+			setTimeout(function() {
+				$('.dataDiri').eq(i).addClass('muncul');
 			}, 300 * (i+1));
 		});
 	}
