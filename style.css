@@ -16,12 +16,12 @@ body {
 }
 
 .navigasi ul {
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 .navigasi ul li {
     display: inline-block;
-    margin-right: 20px;
 }
 
 .navigasi li a {
@@ -42,9 +42,7 @@ body {
 
 /* pembungkus */
 .pembungkus {
-    margin: auto;
-    width: 100%;
-    max-width: 95%;
+    max-width: 100%;
     text-align: center;
     box-sizing: border-box;
 }
@@ -110,10 +108,14 @@ h2:hover {
 }
 
 /* tentang */
+.about {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .tentang, .tugas, .kontak {
-    margin-bottom: 50px;
-    padding: 10px;
-    padding-bottom: 40px;
+    padding: 30px;
+    margin: 20px;
     background-color: rgb(24,116,253);
     border-radius: 10px;
     color: #fff;
@@ -126,13 +128,10 @@ h2:hover {
     transition: .5s;
 }
 
-.tentang .hobbi, .profil, .kemampuan {
+.hobbi, .profil, .kemampuan {
     width: 300px;
     height: 200px;
-    float: left;
-    margin-left: 75px;
-    margin-top: 30px;
-    padding: 10px;
+    margin: 10px;
     border-radius: 10px;
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.58);
     opacity: 0;
@@ -153,7 +152,7 @@ h2:hover {
 
 .tentang ul{
     text-align: left;
-    /* list-style-type: circle; */
+    list-style-type: circle;
 }
 
 .tentang .hobbi {
@@ -170,7 +169,11 @@ h2:hover {
 /* akhir tentang */
 
 /* tugas */
-.tugas ul{
+.task {
+    display: flex;
+}
+
+.task ul{
     text-align: left;
     list-style-type: circle;
 }
@@ -181,12 +184,9 @@ h2:hover {
     transition: .5s;
 }
 
-.tugas .p03, .p04, .p05, .p06, .p07 {
-    width: 300px;
-    height: 200px;
-    float: left;
-    margin-left: 75px;
-    padding: 10px;
+.task .p0Semua {
+    width: 20%;
+    margin: 10px;
     border-radius: 10px;
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.58);
     opacity: 0;
@@ -199,29 +199,11 @@ h2:hover {
     transform: translate(0,0);
 }
 
-.p03 {
-    background-color: salmon;
-    
-}
-
-.p04 {
-    background-color: blue;
-}
-
-.p05 {
-    background-color: purple;
-}
-
-.p06 {
-    background-color: rgb(26, 158, 55);
-    margin-top: 30px;
-    margin-left: 250px;
-}
-
-.p07 {
-    background-color: rgb(52, 224, 224);
-    margin-top: 30px;
-}
+.p03 { background-color: salmon; }
+.p04 { background-color: blue; }
+.p05 { background-color: purple; }
+.p06 { background-color: rgb(26, 158, 55); }
+.p07 { background-color: rgb(52, 224, 224); }
 
 .tugas li a {
     color: #fff;
@@ -233,84 +215,63 @@ h2:hover {
     color: salmon;
     border-radius: 3px;
 }
-
-.float-hilang {
-    clear: both;
-}
 /* akhir tugas */
 
 /* kontak */
 .kontak {
-    margin-bottom: 270px;
+    /* margin-bottom: 270px; */
 }
 
 .tengah {
-    width: 60%;
-    margin: auto;
+    display: flex;
+    justify-content: center;
 }
 
 .kontak .facebook, .instagram, .youtube, .website, .whatsapp {
     width: 80px;
     height: 80px;
+    margin: 20px;
     border-radius: 50%;
     box-shadow: 1px 1px 10px 10px rgba(0,0,0,0.49);
     background-size: cover;
-    float: left;
-    margin-right: 50px;
-    margin-top: 30px;
     transition: 0.2s;
     opacity: 90%;
     cursor: pointer;
 }
 
-.facebook {
-    background-image: url(image/facebook.png);
-    margin-left: 70px;
-}
+.facebook { background-image: url(image/facebook.png); }
 
 .facebook:hover {
     transform: scale(1.7);
     opacity: 100%;
 }
 
-.instagram {
-    background-image: url(image/instagram.png);
-}
+.instagram { background-image: url(image/instagram.png); }
 
 .instagram:hover {
     transform: scale(1.7);
     opacity: 100%;
 }
 
-.youtube {
-    background-image: url(image/youtube.png);
-}
+.youtube { background-image: url(image/youtube.png); }
 
 .youtube:hover {
     transform: scale(1.7);
     opacity: 100%;
 }
 
-.website {
-    background-image: url(image/website.png);
-}
+.website { background-image: url(image/website.png); }
 
 .website:hover {
     transform: scale(1.7);
     opacity: 100%;
 }
 
-.whatsapp {
-    background-image: url(image/whatsapp.png);
-}
+.whatsapp { background-image: url(image/whatsapp.png); }
 
 .whatsapp:hover {
     transform: scale(1.7);
     opacity: 100%;
-}
-
-.hapus-float {
-    clear: both;
 }
 
 .kontak .sosmed {
@@ -345,7 +306,7 @@ h2:hover {
 
 /* versi mobile */
 /* media query */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
     /* For mobile phones: */
     body {
         box-sizing: border-box;
@@ -354,12 +315,7 @@ h2:hover {
     .navigasi {
         background-color: purple;
     }
-
-    .navigasi ul li {
-        display: inline-block;
-        margin-right: 10px;
-    }
-
+    
     .navigasi li a {
         font-size: 11px;
         padding: 10px;
@@ -382,52 +338,34 @@ h2:hover {
         font-size: 14px;
     }
 
-    .tentang, .tugas, .kontak {
-        background-color: purple;
+    .about {
+        flex-wrap: wrap;
     }
 
-    .isiTentang {
-        font-size: 12px;
+    .tentang, .tugas, .kontak { background-color: purple; }
+
+    .isiTentang { font-size: 12px; }
+
+    .task {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
-    .tugas .p03, .p04, .p05, .p06, .p07 {
-        width: 250px;
-        height: 250px;
-        margin-left: 40px;
-        margin-top: 20px;
-        padding: 10px;
-        box-sizing: border-box;
+    .task .p0Semua {
+        width: 300px;
+        height: 300px;
     }
 
-    .p05 {
-        background-color: orange;
-    }
+    .p05 { background-color: orange; }
 
-    .tugas li a {
-        font-size: 13px;
-    }
+    .tugas li a { font-size: 13px; }
 
-    .kontak {
-        margin-bottom: 295px;
-    }
-
-    .kontak p {
-        font-size: 13px;
-    }
-
-    .tengah {
-        width: 100%;
-        margin: auto;
-    }
+    .kontak p { font-size: 13px; }
 
     .kontak .facebook, .instagram, .youtube, .website, .whatsapp {
         width: 50px;
         height: 50px;
-        margin-right: 15px;
-    }
-
-    .facebook {
-        margin-left: 10px;
+        margin: 5px;
     }
 
     .footer {

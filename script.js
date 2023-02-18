@@ -37,7 +37,7 @@ $(window).scroll(function(){
 		});
 	}
 
-	if( cobaSekrol > $('.kontak').offset().top - 250) {
+	if( cobaSekrol > $('.kontak').offset().top - 500) {
 		$('.sosmed').each(function(i) {
 			setTimeout(function() {
 				$('.sosmed').eq(i).addClass('sMuncul');
