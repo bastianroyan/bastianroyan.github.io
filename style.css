@@ -315,12 +315,12 @@ h2:hover {
         color: rgb(250, 229, 250);
     }
 
-    nav ul li a {
-        color: rgb(250, 229, 250);
+    nav .logo {
+        display: none;
     }
 
-    nav ul {
-        justify-content: space-around;
+    nav ul li a {
+        color: rgb(250, 229, 250);
     }
 
     .pembungkus img {
