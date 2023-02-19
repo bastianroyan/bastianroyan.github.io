@@ -1,44 +1,98 @@
 body {
-    background-image: url(image/bg.webp);
-    font-family: "Sofia", sans-serif;
+    padding: 0;
+    margin: 0;
+    background-image: url(image/bg2.svg);
+    font-family: 'Montserrat' sans-serif;
+    overflow-x: hidden;
 }
 
-/* navigasi */
-.navigasi {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 50px;
-    background-color: rgb(24,116,253);
-    border-bottom: 3px solid salmon;
-    z-index: 9999;
-}
-
-.navigasi ul {
+/* Navbar */
+nav {
     display: flex;
-    justify-content: center;
+    background-color: rgb(27,118,253);
+    justify-content: space-around;
+    height: 50px;
+    align-items: center;
+    color: rgb(168, 203, 255);
 }
 
-.navigasi ul li {
-    display: inline-block;
+nav .logo {
+    font-family: 'Pacifico', cursive;
+    letter-spacing: 3px;
 }
 
-.navigasi li a {
-    font-family: "Audiowide", sans-serif;
-    font-size: 14px;
-    color: #fff;
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+}
+
+nav ul li a {
+    color: rgb(168, 203, 255);
     text-decoration: none;
-    padding: 10px;
-    transition: .2s;
+    font-size: 0.8em;
 }
 
-.navigasi li a:hover {
-    background-color: #fff;
-    border-radius: 5px;
-    color: salmon;
+nav ul li a:hover {
+    color: rgb(235, 241, 252);
 }
-/* akhir navigasi */
+/* Akhir Navbar */
+
+/* Humburger Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -5px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: rgb(207, 171, 241);
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+/* Akhir Humburger Menu */
+
+/* Humburger Menu Animation */
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+    background-color: white;
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+    background-color: white;
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+}
+/* Akhir Humburger Menu Animation */
 
 /* pembungkus */
 .pembungkus {
@@ -47,7 +101,7 @@ body {
     box-sizing: border-box;
 }
 
-img {
+.pembungkus img {
     margin-top: 70px;
     border-radius: 50%;
     border: 3px solid #fff;
@@ -218,10 +272,6 @@ h2:hover {
 /* akhir tugas */
 
 /* kontak */
-.kontak {
-    /* margin-bottom: 270px; */
-}
-
 .tengah {
     display: flex;
     justify-content: center;
@@ -304,34 +354,60 @@ h2:hover {
 }
 /* akhir footer */
 
-/* versi mobile */
-/* media query */
-@media only screen and (max-width: 600px) {
-    /* For mobile phones: */
-    body {
-        box-sizing: border-box;
+/* Responsive Breakpoint */
+
+/* ukuran tablet */
+@media screen and (max-width: 768px) {
+    nav ul {
+        width: 50%;
+    }
+}
+/* akhir ukuran tablet */
+
+/* ukuran mobile */
+@media only screen and (max-width: 576px) {
+    .menu-toggle {
+        display: flex;
     }
 
-    .navigasi {
+    nav {
         background-color: purple;
-    }
-    
-    .navigasi li a {
-        font-size: 11px;
-        padding: 10px;
+        color: rgb(219, 106, 219);
     }
 
-    img {
+    nav ul {
+        position: absolute;
+        width: 80%;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        margin-top: 50px;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1;
+        background-color: purple;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    nav ul.slide {
+        opacity: 0.8;
+        transform: translateX(0);
+    }
+
+    .pembungkus img {
         width: 130px;
     }
 
     h2 {
-        font-size: 20px;
+        font-size: 23px;
         color: purple;
     }
 
     .quotes {
-        font-size: 13px;
+        font-size: 9px;
     }
 
     h3 {
@@ -342,7 +418,9 @@ h2:hover {
         flex-wrap: wrap;
     }
 
-    .tentang, .tugas, .kontak { background-color: purple; }
+    .tentang, .tugas, .kontak {
+        background-color: purple; 
+    }
 
     .isiTentang { font-size: 12px; }
 
@@ -381,4 +459,4 @@ h2:hover {
         font-size: 13px;
     }
 }
-/* akhir media query */
+/* akhir ukuran mobile */

@@ -1,3 +1,12 @@
+// efek menu toggle
+const menuToggle = document.querySelector('.menu-toggle input');
+const nav = document.querySelector('nav ul');
+
+menuToggle.addEventListener('click', function () {
+    nav.classList.toggle('slide');
+});
+// akhir efek menu toggle
+
 // efek slow sekrol
 $('.sekrol').on('click', function(){
 	var tujuan = $(this).attr('href');
