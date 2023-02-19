@@ -2,8 +2,7 @@ body {
     padding: 0;
     margin: 0;
     background-image: url(image/bg2.svg);
-    font-family: 'Montserrat' sans-serif;
-    overflow-x: hidden;
+    font-family: 'Sofia' sans-serif;
 }
 
 /* Navbar */
@@ -38,61 +37,6 @@ nav ul li a:hover {
     color: rgb(235, 241, 252);
 }
 /* Akhir Navbar */
-
-/* Humburger Menu */
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    height: 20px;
-    justify-content: space-between;
-    position: relative;
-}
-
-.menu-toggle input {
-    position: absolute;
-    width: 40px;
-    height: 28px;
-    left: -5px;
-    top: -3px;
-    opacity: 0;
-    cursor: pointer;
-    z-index: 3;
-}
-
-.menu-toggle span {
-    display: block;
-    width: 28px;
-    height: 3px;
-    background-color: rgb(207, 171, 241);
-    border-radius: 3px;
-    transition: all 0.5s;
-}
-/* Akhir Humburger Menu */
-
-/* Humburger Menu Animation */
-.menu-toggle span:nth-child(2) {
-    transform-origin: 0 0;
-}
-
-.menu-toggle span:nth-child(4) {
-    transform-origin: 0 100%;
-}
-
-.menu-toggle input:checked ~ span:nth-child(2) {
-    background-color: white;
-    transform: rotate(45deg) translate(-1px, -1px);
-}
-
-.menu-toggle input:checked ~ span:nth-child(4) {
-    background-color: white;
-    transform: rotate(-45deg) translate(-1px, 0);
-}
-
-.menu-toggle input:checked ~ span:nth-child(3) {
-    opacity: 0;
-    transform: scale(0);
-}
-/* Akhir Humburger Menu Animation */
 
 /* pembungkus */
 .pembungkus {
@@ -366,35 +310,17 @@ h2:hover {
 
 /* ukuran mobile */
 @media only screen and (max-width: 576px) {
-    .menu-toggle {
-        display: flex;
-    }
-
     nav {
         background-color: purple;
-        color: rgb(219, 106, 219);
+        color: rgb(250, 229, 250);
+    }
+
+    nav ul li a {
+        color: rgb(250, 229, 250);
     }
 
     nav ul {
-        position: absolute;
-        width: 80%;
-        right: 0;
-        top: 0;
-        height: 100vh;
-        margin-top: 50px;
-        justify-content: space-evenly;
-        flex-direction: column;
-        align-items: center;
-        z-index: 1;
-        background-color: purple;
-        transform: translateX(100%);
-        transition: all 1s;
-        opacity: 0;
-    }
-
-    nav ul.slide {
-        opacity: 0.8;
-        transform: translateX(0);
+        justify-content: space-around;
     }
 
     .pembungkus img {
@@ -407,7 +333,7 @@ h2:hover {
     }
 
     .quotes {
-        font-size: 9px;
+        font-size: 7px;
     }
 
     h3 {
