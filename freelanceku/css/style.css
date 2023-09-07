@@ -187,10 +187,6 @@ body {
 
 /* Mobile Phone */
 @media (max-width: 576px) {
-    html {
-        font-size: 50%;
-    }
-
     .hero {
         background-image: none;
     }
