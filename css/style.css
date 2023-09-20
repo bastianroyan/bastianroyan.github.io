@@ -17,6 +17,7 @@ body {
     background-image: linear-gradient(90deg, #ffffff 20%, #703dc2 100%);
 }
 
+
 /* Navbar */
 .navbar {
     display: flex;
@@ -38,7 +39,7 @@ body {
     font-family: 'Pacifico', serif;
     font-size: 1.2rem;
     font-weight: 700;
-    color: #333;
+    color: #0F172A;
 }
 
 .navbar img {
@@ -52,7 +53,7 @@ body {
     display: inline-block;
     font-size: 1rem;
     margin: 0 2rem;
-    color: #333;
+    color: #0F172A;
 }
 
 .navbar .navbar-nav a:hover {
@@ -76,6 +77,7 @@ body {
     color: #333;
     display: none;
 }
+
 
 /* Hero Section */
 .hero {
@@ -102,9 +104,9 @@ body {
 
 .hero .content span {
     font-size: 2em;
-    color: #333;
-    /* font-family: 'Oswald', sans-serif; */
-    font-family: 'Pacifico', cursive;
+    color: #0F172A;
+    font-family: 'Oswald', sans-serif;
+    /* font-family: 'Pacifico', cursive; */
 }
 
 .hero .content p {
@@ -129,6 +131,7 @@ body {
     background-color: #612dda;
 }
 
+
 /* About Section */
 .about,
 .portfolio,
@@ -142,13 +145,15 @@ body {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 3rem;
+    color: #0F172A;
 }
 
 .about .row {
     display: flex;
 }
 
-.about .row .about-me, .social-media {
+.about .about-me, 
+.about .social-media {
     flex: 1 1 35rem;
     padding: 0 1rem;
 }
@@ -172,6 +177,7 @@ body {
 .about .row .socials a:hover {
     color: #703dc2;
 }
+
 
 /* Portfolio Section */
 .portfolio .row {
@@ -199,31 +205,37 @@ body {
     font-weight: 300;
 }
 
+
 /* Contact Section */
 .contact .row {
     display: flex;
     justify-content: center;
 }
 
-.contact .row form .input-group {
+.contact form {
+    width: 60%;
+}
+
+.contact form .input-group {
     padding-bottom: 1rem;
 }
 
-.contact .row form .input-group label {
+.contact form .input-group label {
     display: block;
-    font-size: 1rem;
+    font-size: 1.3rem;
 }
 
-.contact .row form .input-group input, textarea {
+.contact form .input-group input,
+.contact form .input-group textarea {
     width: 100%;
-    padding: 1rem 40rem 1rem 1rem;
+    padding: 1rem;
     border-radius: 10px;
     background-color: rgba(102, 48, 230, 0.8);
 }
 
-.contact .row form .btn {
+.contact form .btn {
     width: 100%;
-    padding: 0.5rem;
+    padding: 1rem;
     border-radius: 20px;
     font-size: 1.2rem;
     background-color: #6630E6;
@@ -231,44 +243,49 @@ body {
     cursor: pointer;
 }
 
-.contact .row form .btn:hover {
+.contact form .btn:hover {
     background-color: #612dda;
 }
 
+
 /* Footer */
 footer {
-    background-color: #333;
+    background-color: #0F172A;
     padding: 3rem 7%;
-    margin-top: 3rem;
+    margin-top: 2rem;
     color: #fff;
 }
 
 footer .row {
     display: flex;
-    justify-content: space-around;
     border-bottom: 1px solid rgba(234, 234, 234, 0.5);
     padding-bottom: 3rem;
 }
 
-footer .row .contact-person h4,
+footer .contact-person,
+footer .links {
+    flex: 1 1 35rem;
+}
+
+footer .contact-person h4,
 .links h4 {
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }
 
-footer .row .contact-person p {
+footer .contact-person p {
     font-size: 1rem;
     color: #eaeaea;
 }
 
-footer .row .links a {
+footer .links a {
     display: block;
     padding: 0.5rem;
     color: #eaeaea;
     font-size: 1rem;
 }
 
-footer .row .links a:hover {
+footer .links a:hover {
     color: #6630E6;
 }
 
@@ -301,20 +318,22 @@ footer .credit a:hover {
 }
 
 
+
 /* Media Queries */
 
 /* Laptop */
 @media (max-width: 1366px) {
-    html {
+    /* html {
         font-size: 80%;
-    }
+    } */
 }
+
 
 /* Tablet */
 @media (max-width: 768px) {
-    html {
+    /* html {
         font-size: 70%;
-    }
+    } */
 
     #hamburger-menu {
         display: inline-block;
@@ -325,8 +344,8 @@ footer .credit a:hover {
         top: 100%;
         right: -100%;
         background-color: #703dc2;
-        width: 30rem;
-        height: 100vh;
+        width: 20rem;
+        height: 40vh;
         transition: 0.3s;
         text-align: center;
         border-radius: 10px;
@@ -340,7 +359,7 @@ footer .credit a:hover {
         display: block;
         margin: 1.5rem;
         padding: 0.5rem;
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .navbar .navbar-nav a:hover::after {
@@ -348,16 +367,40 @@ footer .credit a:hover {
     }
 
     .hero {
+        min-height: 50vh;
         background-size: 40%;
         background-position: right;
     }
+
+    .about .row,
+    footer .row {
+        flex-wrap: wrap;
+    }
+
+    .about .about-me, 
+    .about .social-media,
+    footer .contact-person,
+    footer .links {
+        padding: 1rem 0;
+    }
+
+    .contact form {
+        width: 100%;
+    }
+
 }
+
 
 /* Mobile Phone */
 @media (max-width: 576px) {
     html {
-        font-size: 50%;
+        font-size: 90%;
     }
+
+    .navbar .navbar-logo {
+        font-size: 1.5rem;
+    }
+
     .hero {
         background: none;
     }
