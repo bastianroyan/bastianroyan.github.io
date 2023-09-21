@@ -81,19 +81,23 @@ body {
 
 /* Hero Section */
 .hero {
+    display: flex;
     margin-top: 2rem;
     min-height: 80vh;
-    display: flex;
     align-items: center;
-    background-image: url('../img/bg_profile_decoration.svg');
+    /* background-image: url('../img/bg_profile_decoration.svg');
     background-repeat: no-repeat;
     background-size: 30%;
-    background-position: 80%;
+    background-position: 80%; */
 }
 
 .hero .content {
     padding: 1.4rem 7%;
     max-width: 60rem;
+}
+
+.hero .profile {
+    margin-top: 5rem;
 }
 
 .hero .content h1 {
@@ -367,9 +371,16 @@ footer .credit a:hover {
     }
 
     .hero {
-        min-height: 50vh;
-        background-size: 40%;
-        background-position: right;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .hero .content {
+        padding: 5rem 7%;
+    }
+    
+    .hero .profile {
+        margin-top: 0;
     }
 
     .about .row,
@@ -401,10 +412,6 @@ footer .credit a:hover {
         font-size: 1.5rem;
     }
 
-    .hero {
-        background: none;
-    }
-
     .hero .content h1 {
         line-height: 1.5;
     }
@@ -416,5 +423,9 @@ footer .credit a:hover {
         margin-top: 2.5rem;
         margin-left: 0;
     }
+
+    /* .hero .profile {
+        width: 100%;
+    } */
 }
 
