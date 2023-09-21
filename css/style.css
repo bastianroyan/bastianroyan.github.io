@@ -349,7 +349,7 @@ footer .credit a:hover {
         right: -100%;
         background-color: #703dc2;
         width: 20rem;
-        height: 40vh;
+        height: 50vh;
         transition: 0.3s;
         text-align: center;
         border-radius: 10px;
@@ -375,12 +375,14 @@ footer .credit a:hover {
         flex-wrap: wrap;
     }
 
-    .hero .content {
-        padding: 5rem 7%;
-    }
-    
     .hero .profile {
+        order: 2;
         margin-top: 0;
+    }
+
+    .hero .content {
+        order: 1;
+        padding: 5rem 7%;
     }
 
     .about .row,
@@ -405,11 +407,15 @@ footer .credit a:hover {
 /* Mobile Phone */
 @media (max-width: 576px) {
     html {
-        font-size: 90%;
+        font-size: 80%;
     }
 
     .navbar .navbar-logo {
         font-size: 1.5rem;
+    }
+
+    .hero .profile {
+        width: 80%;
     }
 
     .hero .content h1 {
@@ -423,9 +429,5 @@ footer .credit a:hover {
         margin-top: 2.5rem;
         margin-left: 0;
     }
-
-    /* .hero .profile {
-        width: 100%;
-    } */
 }
 
