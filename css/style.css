@@ -84,6 +84,7 @@ body {
     display: flex;
     margin-top: 2rem;
     min-height: 80vh;
+    justify-content: center;
     align-items: center;
     /* background-image: url('../img/bg_profile_decoration.svg');
     background-repeat: no-repeat;
@@ -109,8 +110,8 @@ body {
 .hero .content span {
     font-size: 2em;
     color: #0F172A;
-    font-family: 'Oswald', sans-serif;
-    /* font-family: 'Pacifico', cursive; */
+    /* font-family: 'Oswald', sans-serif; */
+    font-family: 'Pacifico', cursive;
 }
 
 .hero .content p {
@@ -170,16 +171,27 @@ body {
 }
 
 .about .row .socials {
-    padding: 1rem 0;
+    padding-top: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
 }
 
 .about .row .socials a {
-    margin: 1rem 1rem 1rem 0;
+    margin-right: 0.5rem;
+    width: 4rem;
+    height: 4rem;
+    border: 1px solid #6630E6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
     color: #6630E6;
 }
 
 .about .row .socials a:hover {
-    color: #703dc2;
+    background-color: #703dc2;
+    color: #fff;
+    border: none;
 }
 
 
@@ -334,7 +346,7 @@ footer .credit a:hover {
 
 
 /* Tablet */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     /* html {
         font-size: 70%;
     } */
@@ -371,8 +383,12 @@ footer .credit a:hover {
     }
 
     .hero {
-        justify-content: center;
         flex-wrap: wrap;
+    }
+
+    .hero .profile {
+        display: flex;
+        justify-content: center;
     }
 
     .hero .profile {
