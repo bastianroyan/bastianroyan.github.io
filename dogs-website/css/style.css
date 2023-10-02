@@ -190,11 +190,6 @@ body {
     width: 50%;
 }
 
-.service-1 .row .left-side,
-.service-3 .row .right-side {
-  /* max-width: 35rem; */
-}
-
 .service-1 .row .left-side h2,
 .service-3 .row .right-side h2 {
   font-size: 3rem;
@@ -203,7 +198,6 @@ body {
 .service-1 .row .left-side p,
 .service-3 .row .right-side p {
   font-size: 1.2rem;
-  max-width: 30rem;
 }
 
 .service-1 .row .left-side .cta,
@@ -329,7 +323,7 @@ body {
 }
 
 /* Service 3 Section */
-.service-3 .row {
+.service-3 .row .right-side {
   text-align: right;
 }
 
@@ -347,11 +341,6 @@ body {
   right: -25px;
   bottom: -25px;
   z-index: -1;
-}
-
-.service-3 .row .right-side p {
-  font-size: 1.2rem;
-  max-width: inherit;
 }
 
 /* Service 4 Section */
@@ -606,10 +595,6 @@ footer .row .footer-social-media .social-media a {
     display: inline-block;
   }
 
-  .navbar {
-    justify-content: space-between;
-  }
-
   .hero,
   .service-1 .row,
   .service-2 .row,
@@ -625,10 +610,6 @@ footer .row .footer-social-media .social-media a {
 
   .hero .content h1 {
     font-size: 3rem;
-  }
-
-  .service-6 .row {
-    height: 80%;
   }
 
   .service-6 .row .health-card {
@@ -664,9 +645,9 @@ footer .row .footer-social-media .social-media a {
 /* Small Device */
 @media (max-width: 576px) {
   html {
-    /* font-size: 100%; */
+    font-size: 90%;
   }
-
+  
   .hero .content .cta {
     font-size: 0.9rem;
   }
@@ -691,6 +672,10 @@ footer .row .footer-social-media .social-media a {
   .service-5 .row .card,
   .service-7 .row .card {
     width: 100%;
+  }
+
+  .service-6 .row {
+    height: 100%;
   }
 
   .service-6 .row .health-card .icons {
