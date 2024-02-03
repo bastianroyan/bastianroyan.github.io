@@ -245,7 +245,7 @@ body {
 
 .section-3 .row .about-img,
 .section-4 .row .about-img {
-  flex: 1 1 40rem;
+  flex: 1 1 40%;
   height: 100vh;
   width: 100%;
   background-image: url(../img/section-3/img-1.jpg);
@@ -260,7 +260,7 @@ body {
 
 .section-3 .row .content,
 .section-4 .row .content {
-  flex: 1 1 40rem;
+  flex: 1 1 40%;
   padding: 0 5rem;
 }
 
