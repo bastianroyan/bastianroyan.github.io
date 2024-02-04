@@ -261,7 +261,7 @@ body {
 .section-3 .row .content,
 .section-4 .row .content {
   flex: 1 1 40%;
-  padding: 0 5rem;
+  padding: 0 3rem;
 }
 
 .section-3 .row .content p.desc,
@@ -554,6 +554,16 @@ footer .row .content .musicology p {
   .section-2 .row .card,
   .section-5 .row .card {
     width: 80%;
+  }
+
+  .section-3 .row .about-img,
+  .section-4 .row .about-img {
+    flex: 1 1 45rem;
+  }
+
+  .section-3 .row .content,
+  .section-4 .row .content {
+    flex: 1 1 45rem;
   }
 
   .section-3 .row .content,
