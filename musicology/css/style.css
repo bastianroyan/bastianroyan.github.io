@@ -454,7 +454,7 @@ footer .row .content .musicology p {
 /* Tablets */
 @media (max-width: 992px) {
   html {
-    font-size: 60%;
+    font-size: 65%;
   }
 
   #hamburger-menu {
@@ -507,7 +507,7 @@ footer .row .content .musicology p {
 /* Landscape Phones */
 @media (max-width: 768px) {
   html {
-    font-size: 50%;
+    font-size: 70%;
   }
 
   .section-1 .row,
@@ -539,7 +539,7 @@ footer .row .content .musicology p {
 /* Potrait Phones */
 @media (max-width: 576px) {
   html {
-    font-size: 60%;
+    font-size: 65%;
   }
 
   .section-1 .row,
