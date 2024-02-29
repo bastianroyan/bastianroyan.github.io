@@ -14,14 +14,8 @@
 
     <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
-
-    <!-- Fonts Awsome Icons -->
-    <link href="fontawesome/css/fontawesome.css" rel="stylesheet">
-    <link href="fontawesome/css/brands.css" rel="stylesheet">
-    <link href="fontawesome/css/solid.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Container Start -->
     <div class="container">
         <!-- Header Start -->
         <header class="header">
@@ -43,7 +37,12 @@
                     <div class="action-button-icons">
                         <a href=""><i class="icon" data-feather="heart"></i></a>
                         <a href=""><i class="icon" data-feather="shopping-cart"></i></a>
-                        <a href="" id="hamburger-menu"><i class="icon" data-feather="menu"></i></a>
+                    </div>
+                    <div class="menu-toggle">
+                        <input type="checkbox">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
                 </div>
             </div>
@@ -52,14 +51,14 @@
 
         <!-- Navbar Start -->
         <nav class="navbar">
-            <div class="navbar-nav">
+            <ul class="navbar-nav">
                 <li><a href="#">home</a></li>
                 <li><a href="#">about us</a></li>
                 <li><a href="#">service</a></li>
                 <li><a href="#">pricing</a></li>
                 <li><a href="#">blog</a></li>
                 <li><a href="#">contact</a></li>
-            </div>
+            </ul>
         </nav>
         <!-- Navbar End -->
 
@@ -81,11 +80,14 @@
             </main>
         </section>
         <!-- Hero Image End -->
-        
     </div>
-    <!-- Container End -->
+
+    <!-- Feather Icons -->
     <script>
         feather.replace();
     </script>
+
+    <!-- My Script -->
+    <script src="js/script.js"></script>
 </body>
 </html>
