@@ -281,6 +281,11 @@ body {
         width: 4rem;
     }
 
+    .header .action-button-container .action-button-icons {
+        gap: 1.2rem;
+    }
+    
+
     .hero .content-head span {
         width: 15rem;   
     }
