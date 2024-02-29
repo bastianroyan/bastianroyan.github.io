@@ -17,8 +17,6 @@ body {
 /* Header */
 .header {
     display: grid;
-    /* grid-template-areas: 
-    'search-button logo logo action-button'; */
     grid-template-columns: 1fr 2fr 1fr;
     padding: 1rem 4% 1rem;
     background-color: var(--primary);
@@ -28,10 +26,6 @@ body {
     left: 0;
     right: 0;
     z-index: 9999;
-}
-
-.header .search {
-    /* background-color: red; */
 }
 
 .header .search .search-container {
@@ -64,7 +58,6 @@ body {
 }
 
 .header .logo {
-    /* grid-area: logo; */
     display: grid;
     justify-items: center;
 }
@@ -75,7 +68,7 @@ body {
 
 .header .action-button-container {
     display: grid;
-    grid-auto-flow: column;
+    grid-auto-flow: column; 
     justify-items: end;
     align-items: center;
 }
@@ -93,15 +86,65 @@ body {
 
 .header .action-button-container .action-button-icons {
     display: flex;
-    gap: 1rem;
+    gap: 1rem;  
 }
 
 .header .action-button-container .action-button-icons a {
     color: #fff;
 }
 
-.header .action-button-container .action-button-icons #hamburger-menu {
+/* Hamburger Menu */
+.header .action-button-container .menu-toggle {
     display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+    z-index: 999;
+}
+
+.header .action-button-container .menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -5px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.header .action-button-container .menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+/* Humburger Menu Animation */
+.header .action-button-container .menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.header .action-button-container .menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.header .action-button-container .menu-toggle input:checked ~ span:nth-child(2) {
+    background-color: white;
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.header .action-button-container .menu-toggle input:checked ~ span:nth-child(4) {
+    background-color: white;
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.header .action-button-container .menu-toggle input:checked ~ span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
 }
 
 /* Navbar */
@@ -119,6 +162,14 @@ body {
     padding: 1rem;
 }
 
+.navbar .navbar-nav a {
+    color: var(--primary); 
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
 .navbar .navbar-nav a::after {
     content: '';
     display: block;
@@ -130,14 +181,6 @@ body {
 
 .navbar .navbar-nav a:hover::after {
     transform: scaleX(0.5);
-}
-
-.navbar .navbar-nav li a {
-    color: var(--primary); 
-    text-decoration: none;
-    font-size: 1rem;
-    text-transform: uppercase;
-    font-weight: 500;
 }
 
 /* Hero Image */
@@ -239,12 +282,39 @@ body {
         display: none;
     }
 
-    .header .action-button-container .action-button-icons #hamburger-menu {
-        display: inline-block;
+    .header .action-button-container {
+        justify-content: end;
+        gap: 1rem;
+    }
+
+    .header .action-button-container .menu-toggle {
+        display: flex;
     }
 
     .navbar .navbar-nav {
-        display: none;
+        display: flex;
+        position: absolute;
+        width: 100%;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1;
+        background-color: rgba(255, 255, 255, 0.8);
+        transform: translateY(-100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    .navbar ul.slide {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .navbar .navbar-nav a {
+        font-size: 1.2rem;
     }
 }
 
@@ -257,6 +327,10 @@ body {
 
 /* X-Small Device */
 @media (max-width: 576px) {
+    html {
+        font-size: 70%;
+    }
+
     body {
         background-color: orange;
     }
